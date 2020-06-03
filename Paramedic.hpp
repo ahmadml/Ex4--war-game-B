@@ -20,7 +20,7 @@ virtual void attak(std::pair<int,int> source,std::vector<std::vector<Soldier*>> 
                 if(sol->damage==50) sol->hp=100;
                 if(sol->damage==100) sol->hp=120;
                 if(sol->damage==0) sol->hp=100;
-                if(typeid(*sol)==typeid(ParamedicCommander)) sol->hp=200;
+                if(sol->damage==1) sol->hp=200;
                 }
             }
         } 
