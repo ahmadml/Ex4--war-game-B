@@ -31,9 +31,9 @@ namespace WarGame {
                     sol = board[temp.first][temp.second];
                     sol->attak(source,this->board,player_number);
                 }
-               // throw out_of_range{"error"};
+               else throw out_of_range{"error"};
             }
-          //  throw out_of_range{"error"};
+             else  throw out_of_range{"error"};
         }
 
 
