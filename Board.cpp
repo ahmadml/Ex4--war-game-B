@@ -19,7 +19,7 @@ namespace WarGame {
 
        void Board::move(uint player_number, std::pair<int,int> source, MoveDIR direction) {
             std::pair<int,int> temp = source;
-            if(source.first>=board.size() && source.second>=board[0].size()) throw out_of_range{"error"};
+            if(source.first>=board.size() || source.second>=board[0].size()) throw out_of_range{"error"};
             Soldier* sol = board[source.first][source.second];
             if(sol!=nullptr && sol->nop==player_number){
                 if(direction==Up) temp.first+=1;
@@ -30,7 +30,7 @@ namespace WarGame {
                     board[temp.first][temp.second]=board[source.first][source.second];
                     board[source.first][source.second]=nullptr;
                     sol = board[temp.first][temp.second];
-                    sol->attak(source,this->board,player_number);
+                    //sol->attak(source,this->board,player_number);
                 }
                else throw out_of_range{"error"};
             }
