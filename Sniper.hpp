@@ -22,9 +22,10 @@ virtual void attak(std::pair<int,int> source,std::vector<std::vector<Soldier*>> 
             }
         }
     }
+    if(max!=0){
     Soldier* s= board[lo.first][lo.second];
     s->hp-=this->damage;
-    //std::cout<<"s-e";
+    }
 
 }
 };
